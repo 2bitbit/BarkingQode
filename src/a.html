@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>播放声音</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        button {
+            font-size: 5rem;
+            padding: 20px 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="playSound()">💕开启旅程</button>
+    <audio id="myAudio" src="audio.mp3" preload="auto"></audio>
+
+    <script>
+        function playSound() {
+            const audio = document.getElementById('myAudio');
+            audio.play().catch(error => {
+                // 如果播放失败（例如文件加载错误），在控制台显示错误。
+                console.error("音频播放失败:", error);
+            });
+        }
+    </script>
+</body>
+
+</html>

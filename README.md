@@ -1,1 +1,2 @@
-# This Is a Barking QR Code Generator
+# This Is a Barking QR Code
+
